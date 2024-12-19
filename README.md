@@ -23,3 +23,6 @@ Maintenant, on veux faire clignoter des LEDs. Le problème est que nous ne pouvo
 ![image](https://github.com/user-attachments/assets/2c41af27-b401-4f13-9826-b1f5842105db)
 
 
+## schéma correspond au nouveau code 
+
+![image](https://github.com/user-attachments/assets/6da09687-44ad-43d6-98c0-350fa83cf1b6)
