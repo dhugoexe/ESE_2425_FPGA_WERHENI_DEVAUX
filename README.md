@@ -3,7 +3,6 @@
 
 ## 1 Tutoriel Quartus
 
-## 1.1 Création d’un projet
 On commence par créer et configurer un projet pour la carte Terasic DE10-Nano.
 
 On prends également soin de configurer le fichier de contrainte selon les indications dz la documentation de la carte. Ci-dessous, l"asignation des PIN pour le programme allumant 4 LEDs:
