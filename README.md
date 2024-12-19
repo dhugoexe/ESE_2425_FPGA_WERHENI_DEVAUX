@@ -11,3 +11,15 @@ On prends également soin de configurer le fichier de contrainte selon les indic
 
 
 Maintenant, on veux faire clignoter des LEDs. Le problème est que nous ne pouvons pas faire clignoter des LEDs à la fréquence d'horloge (50MHz, clignotement invisible). On veux odnc pouvoir régler la fréquence de clignotment. Ainsi, on réalise le programme `led-blink.vhd`. Ci-dessous, le résultat de l'exécution:
+
+![image](https://github.com/user-attachments/assets/a40e2239-99dc-4947-acaf-565a3860d827)
+
+## 1.6 Faire clignoter une LED
+
+![image](https://github.com/user-attachments/assets/7c03e5a5-3465-483f-abb9-26794036d51c)
+
+## configuration de pin
+
+![image](https://github.com/user-attachments/assets/2c41af27-b401-4f13-9826-b1f5842105db)
+
+
