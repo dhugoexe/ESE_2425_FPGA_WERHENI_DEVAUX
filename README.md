@@ -22,6 +22,7 @@ Ce code semble être conçu pour faire clignoter une LED en créant une temporis
 
 ## configuration de pin
 
+
 ![image](https://github.com/user-attachments/assets/2c41af27-b401-4f13-9826-b1f5842105db)
 
 
