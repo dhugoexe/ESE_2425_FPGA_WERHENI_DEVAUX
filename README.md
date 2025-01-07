@@ -285,7 +285,7 @@ end architecture rtl;
 
 ````
 
-![image](https://github.com/user-attachments/assets/bcb8197f-3677-46e2-b180-1c9a15b794d2)
+![image](https://github.com/user-attachments/assets/1ef355a5-b1d6-4ae7-b93e-2d69a17137e9)
 
 
 
