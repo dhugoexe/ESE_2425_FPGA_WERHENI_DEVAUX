@@ -16,6 +16,8 @@ Maintenant, on veux faire clignoter des LEDs. Le problème est que nous ne pouvo
 
 ## 1.6 Faire clignoter une LED
 
+Ce code semble être conçu pour faire clignoter une LED en créant une temporisation. Le compteur jusqu'à 500000 est utilisé pour créer un délai entre chaque changement d'état de la LED
+
 ![image](https://github.com/user-attachments/assets/7c03e5a5-3465-483f-abb9-26794036d51c)
 
 ## configuration de pin
