@@ -22,6 +22,7 @@ Ce code semble être conçu pour faire clignoter une LED en créant une temporis
 
 ## configuration de pin
 
+Nous allons présente une table de configuration des broches (pins) pour un circuit intégré ou un FPGA. Elle détaille les spécifications pour trois signaux principaux : i_clk, i_rst_n et i_led. Ces signaux sont configurés avec des caractéristiques précises : i_clk et i_rst_n sont définis comme des entrées tandis que i_led est configuré comme une sortie. Ils sont respectivement assignés aux emplacements physiques PIN_AH17, PIN_W13 et PIN_W15 sur le composant. 
 
 ![image](https://github.com/user-attachments/assets/2c41af27-b401-4f13-9826-b1f5842105db)
 
