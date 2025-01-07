@@ -130,6 +130,8 @@ end architecture rtl;
 
 ## TP2 Petit projet : Bouncing ENSEA Logo
 
+## 2.1 Contrôleur HDMI
+
 # Analysez l’entity :
 
 Paramètres de résolution :
@@ -151,11 +153,45 @@ v_sync = 5 : Durée de l'impulsion de synchronisation verticale
 v_fp = 30 : Front porch vertical (nombre de lignes d'attente avant la synchro)
 v_bp = 9 : Back porch vertical (nombre de lignes d'attente après la synchro)
 
+#  le rôle de chaque signal dans le générateur HDMI :
+
+Signaux d'entrée :
+
+i_clk : Signal d'horloge qui cadence tout le système
+i_reset_n : Signal de réinitialisation asynchrone actif à l'état bas (reset)
+
+
+Signaux de synchronisation HDMI :
+
+o_hdmi_hs : Signal de synchronisation horizontale
+o_hdmi_vs : Signal de synchronisation verticale
+o_hdmi_de : Signal "Data Enable" qui indique quand les pixels sont dans la zone active
+
+
+Signaux de gestion des pixels :
+
+o_pixel_en : Signal d'activation indiquant quand un pixel doit être affiché
+o_pixel_address : Adresse linéaire du pixel courant (de 0 à h_res × v_res - 1)
+
+
+Signaux de position :
+
+o_x_counter : Position horizontale dans la zone active (de 0 à h_res - 1)
+o_y_counter : Position verticale dans la zone active (de 0 à v_res - 1)
+o_pixel_pos_x : Position X du pixel courant
+o_pixel_pos_y : Position Y du pixel courant
+
+
+Signal de synchronisation de trame :
+
+o_new_frame : Signal indiquant le début d'une nouvelle trame
+
 # 2.1.1 Écriture du composant
 
 * un compteur horizontal (h_count) qui boucle de 0 à h_total, et qui génère le signal de synchronisation horizontal (o_hdmi_hs).
 ![image](https://github.com/user-attachments/assets/2c9241a5-8d39-4920-8788-51a8ce3418ab)
 
+Nous allons Ajoutez un compteur vertical (v_count) qui s’incrémente à chaque cycle du compteur horizontal, et boucle de 0 à v_total. Le compteur vertical doit également générer le signal de synchronisation vertical (o_hdmi_vs).
 
 ![image](https://github.com/user-attachments/assets/d5f4f7dd-a768-4cb0-8d5b-5a556dd77f33)
 
