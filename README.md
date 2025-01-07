@@ -26,3 +26,40 @@ Maintenant, on veux faire clignoter des LEDs. Le problème est que nous ne pouvo
 ## schéma correspond au nouveau code 
 
 ![image](https://github.com/user-attachments/assets/6da09687-44ad-43d6-98c0-350fa83cf1b6)
+
+### BLINKS
+
+![image](https://github.com/user-attachments/assets/2eb44609-affe-491a-8975-51583d10f687)
+
+```
+library ieee;
+use ieee.std_logic_1164.all;
+entity led_blink is
+  port (
+      i_clk : in std_logic;
+      i_rst_n : in std_logic;
+      o_led : out std_logic_vector(3 downto 0)
+  );
+end entity led_blink;
+
+architecture rtl of led_blink is
+ signal r_led_enable : std_logic_vector(3 downto 0) := "0000";
+begin
+ process(i_clk, i_rst_n)
+   variable counter : natural range 0 to 5000000 := 0;
+ begin
+   if (i_rst_n = '0') then
+       counter := 0;
+       r_led_enable <= "0000";
+   elsif (rising_edge(i_clk)) then
+     if (counter = 5000000) then
+         counter := 0;
+         r_led_enable <= not r_led_enable;
+     else
+        counter := counter + 1;
+     end if;
+   end if;
+ end process;
+ o_led <= r_led_enable;
+end architecture rtl;
+```
