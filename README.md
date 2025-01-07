@@ -127,3 +127,30 @@ begin
     o_led <= r_led_enable;
 end architecture rtl;
 ```
+
+## TP2 Petit projet : Bouncing ENSEA Logo
+
+# Analysez l’entity :
+
+Paramètres de résolution :
+
+h_res = 720 : Résolution horizontale, soit le nombre de pixels visibles par ligne
+v_res = 480 : Résolution verticale, soit le nombre de lignes visibles dans l'image
+
+
+Paramètres de timing horizontal :
+
+h_sync = 61 : Durée de l'impulsion de synchronisation horizontale
+h_fp = 58 : Front porch horizontal (temps d'attente avant la synchro)
+h_bp = 18 : Back porch horizontal (temps d'attente après la synchro)
+
+
+Paramètres de timing vertical :
+
+v_sync = 5 : Durée de l'impulsion de synchronisation verticale
+v_fp = 30 : Front porch vertical (nombre de lignes d'attente avant la synchro)
+v_bp = 9 : Back porch vertical (nombre de lignes d'attente après la synchro)
+
+
+![image](https://github.com/user-attachments/assets/2c9241a5-8d39-4920-8788-51a8ce3418ab)
+
