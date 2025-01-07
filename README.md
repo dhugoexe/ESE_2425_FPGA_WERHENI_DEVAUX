@@ -151,6 +151,12 @@ v_sync = 5 : Durée de l'impulsion de synchronisation verticale
 v_fp = 30 : Front porch vertical (nombre de lignes d'attente avant la synchro)
 v_bp = 9 : Back porch vertical (nombre de lignes d'attente après la synchro)
 
+# 2.1.1 Écriture du composant
 
+* un compteur horizontal (h_count) qui boucle de 0 à h_total, et qui génère le signal de synchronisation horizontal (o_hdmi_hs).
 ![image](https://github.com/user-attachments/assets/2c9241a5-8d39-4920-8788-51a8ce3418ab)
+
+
+![image](https://github.com/user-attachments/assets/d5f4f7dd-a768-4cb0-8d5b-5a556dd77f33)
+
 
