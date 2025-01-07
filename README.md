@@ -235,4 +235,57 @@ end architecture rtl;
 
 ![image](https://github.com/user-attachments/assets/d5f4f7dd-a768-4cb0-8d5b-5a556dd77f33)
 
+*implémentation les signaux h_act et v_act
+
+````
+architecture rtl of hdmi_generator is
+    -- Constantes
+    constant h_total : natural := h_res + h_fp + h_sync + h_bp;
+    constant v_total : natural := v_res + v_fp + v_sync + v_bp;
+    
+    -- Signaux internes
+    signal h_count : natural range 0 to h_total - 1;
+    signal v_count : natural range 0 to v_total - 1;
+    signal h_act : std_logic;  -- Nouveau signal pour zone active horizontale
+    signal v_act : std_logic;  -- Nouveau signal pour zone active verticale
+
+begin
+    -- Process des compteurs
+    process(i_clk, i_reset_n)
+    begin
+        if i_reset_n = '0' then
+            h_count <= 0;
+            v_count <= 0;
+        elsif rising_edge(i_clk) then
+            -- Compteur horizontal
+            if h_count = h_total - 1 then
+                h_count <= 0;
+                -- Compteur vertical
+                if v_count = v_total - 1 then
+                    v_count <= 0;
+                else
+                    v_count <= v_count + 1;
+                end if;
+            else
+                h_count <= h_count + 1;
+            end if;
+        end if;
+    end process;
+
+    -- Détection des zones actives
+    h_act <= '1' when h_count < h_res else '0';  -- Zone active horizontale
+    v_act <= '1' when v_count < v_res else '0';  -- Zone active verticale
+
+    -- Signaux de synchronisation
+    o_hdmi_hs <= '0' when (h_count >= (h_res + h_fp) and h_count < (h_res + h_fp + h_sync)) else '1';
+    o_hdmi_vs <= '0' when (v_count >= (v_res + v_fp) and v_count < (v_res + v_fp + v_sync)) else '1';
+    o_hdmi_de <= h_act and v_act;  -- Zone active uniquement quand les deux sont actifs
+
+end architecture rtl;
+
+````
+
+![image](https://github.com/user-attachments/assets/bcb8197f-3677-46e2-b180-1c9a15b794d2)
+
+
 
