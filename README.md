@@ -35,7 +35,18 @@ Ce schéma représente un circuit de contrôle LED avec compteur et logique de s
 
 ### BLINKS
 
-![image](https://github.com/user-attachments/assets/2eb44609-affe-491a-8975-51583d10f687)
+Dans la déclaration du port, 
+
+*o_led est maintenant déclaré comme un std_logic_vector(3 downto 0) au lieu d'un simple std_logic
+
+*Un nouveau signal r_led_enable a été ajouté et déclaré comme un std_logic_vector(3 downto 0) avec une valeur initiale de "0000"
+
+Dans le process, quand le compteur atteint 5000000 cycles :
+
+
+*Le signal r_led_enable bascule tous ses bits simultanément grâce à l'opérateur 'not' Cela signifie que toutes les LEDs vont clignoter en même temps, passant de "0000" à "1111" et vice versa La sortie o_led est directement connectée au signal r_led_enable, donc les 4 LEDs vont clignoter de manière synchronisée
+
+
 
 ```
 library ieee;
@@ -69,7 +80,7 @@ begin
  o_led <= r_led_enable;
 end architecture rtl;
 ```
-
+![image](https://github.com/user-attachments/assets/2eb44609-affe-491a-8975-51583d10f687)
 ### Chenillard
 
 ```
