@@ -1,0 +1,94 @@
+m255
+K4
+z2
+!s11e vcom 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 d/home/ese/Documents/HDMI_TX
+Ehdmi_generator
+Z1 w1736343956
+Z2 DPx4 ieee 11 numeric_std 0 22 aU^R8eGcicLcUFIaBQSL>3
+Z3 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z4 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
+!i122 56
+R0
+Z5 8hdmi_generator.vhd
+Z6 Fhdmi_generator.vhd
+l0
+L4 1
+V5YkbjOH`@]3W5akZiVGkz2
+!s100 N_>A:jX0mao4Nn7953YYE1
+Z7 OV;C;2020.1;71
+32
+Z8 !s110 1736343971
+!i10b 1
+Z9 !s108 1736343971.000000
+Z10 !s90 -reportprogress|300|hdmi_generator.vhd|
+Z11 !s107 hdmi_generator.vhd|
+!i113 1
+Z12 tExplicit 1 CvgOpt 0
+Artl
+R2
+R3
+R4
+Z13 DEx4 work 14 hdmi_generator 0 22 5YkbjOH`@]3W5akZiVGkz2
+!i122 56
+l44
+L32 87
+VZ@8lf5=`XZoBKKe?U>5z;3
+!s100 =I35dMk@NiF6QT=nfW9IE0
+R7
+32
+R8
+!i10b 1
+R9
+R10
+R11
+!i113 1
+R12
+Ehdmi_generator_tb
+Z14 w1736343457
+R2
+R3
+R4
+!i122 57
+R0
+Z15 8hdmi_generator_tb.vhd
+Z16 Fhdmi_generator_tb.vhd
+l0
+L5 1
+V9WinkF>?2WPY6=hVaYc?H2
+!s100 f8^<=JZlCUJI^W:@>JZG90
+R7
+32
+Z17 !s110 1736343973
+!i10b 1
+Z18 !s108 1736343973.000000
+Z19 !s90 -reportprogress|300|hdmi_generator_tb.vhd|
+Z20 !s107 hdmi_generator_tb.vhd|
+!i113 1
+R12
+Atb
+R13
+R2
+R3
+R4
+Z21 DEx4 work 17 hdmi_generator_tb 0 22 9WinkF>?2WPY6=hVaYc?H2
+!i122 57
+l32
+Z22 L8 67
+Z23 VX3bM>^=e_ZVH7>_GhKAMT0
+Z24 !s100 zRRz7^jjjmcMkk6kB`SOm1
+R7
+32
+R17
+!i10b 1
+R18
+R19
+R20
+!i113 1
+R12
