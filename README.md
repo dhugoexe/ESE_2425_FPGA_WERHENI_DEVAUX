@@ -215,7 +215,8 @@ o_new_frame : Signal indiquant le début d'une nouvelle trame
 
 # 2.1.1 Écriture du composant
 
-* un compteur horizontal (h_count) qui boucle de 0 à h_total, et qui génère le signal de synchronisation horizontal (o_hdmi_hs).
+Notre code implémente un compteur horizontal (h_count) qui s'incrémente de 0 à h_total, générant ainsi le signal de synchronisation horizontale (o_hdmi_hs) comme illustré dans la figure ci-dessous.
+
 ![image](https://github.com/user-attachments/assets/2c9241a5-8d39-4920-8788-51a8ce3418ab)
 
 Nous allons Ajoutez un compteur vertical (v_count) qui s’incrémente à chaque cycle du compteur horizontal, et boucle de 0 à v_total. Le compteur vertical doit également générer le signal de synchronisation vertical (o_hdmi_vs).
