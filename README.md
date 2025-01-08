@@ -322,4 +322,9 @@ end architecture rtl;
 
 ![image](https://github.com/user-attachments/assets/cdb97aeb-d7e7-44d3-bc6f-6ea919289a4d)
 
+## 2.2 Bouncing ENSEA Logo
+
+![image](https://github.com/user-attachments/assets/6874a7a1-6dd7-41aa-a8d5-f7f9c5825162)
+
+
 
