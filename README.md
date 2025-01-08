@@ -320,6 +320,6 @@ end architecture rtl;
 
 8-Pour finaliser notre implémentation, nous allons intégrer deux compteurs qui généreront les signaux o_x_counter et o_y_counter, permettant ainsi le suivi des positions des pixels actifs en coordonnées X et Y. 
 
-
+![image](https://github.com/user-attachments/assets/cdb97aeb-d7e7-44d3-bc6f-6ea919289a4d)
 
 
