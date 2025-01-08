@@ -219,7 +219,7 @@ o_new_frame : Signal indiquant le début d'une nouvelle trame
 
 ![image](https://github.com/user-attachments/assets/2c9241a5-8d39-4920-8788-51a8ce3418ab)
 
-2-Nous allons Ajoutez un compteur vertical (v_count) qui s’incrémente à chaque cycle du compteur horizontal, et boucle de 0 à v_total. Le compteur vertical doit également générer le signal de synchronisation vertical (o_hdmi_vs).
+3-Nous allons Ajoutez un compteur vertical (v_count) qui s’incrémente à chaque cycle du compteur horizontal, et boucle de 0 à v_total. Le compteur vertical doit également générer le signal de synchronisation vertical (o_hdmi_vs).
 
 ```
 architecture rtl of hdmi_generator is
@@ -263,7 +263,7 @@ end architecture rtl;
 
 ![image](https://github.com/user-attachments/assets/d5f4f7dd-a768-4cb0-8d5b-5a556dd77f33)
 
-3-Nous allons maintenant implémenter les signaux h_act et v_act pour détecter les zones actives horizontales et verticales.
+5-Nous allons maintenant implémenter les signaux h_act et v_act pour détecter les zones actives horizontales et verticales.
 
 ````
 architecture rtl of hdmi_generator is
@@ -312,8 +312,12 @@ begin
 end architecture rtl;
 
 ````
-
 ![image](https://github.com/user-attachments/assets/1ef355a5-b1d6-4ae7-b93e-2d69a17137e9)
+
+7-Nous allons implémenter un compteur de pixels actifs (r_pixel_counter) qui s'incrémente uniquement dans les zones actives pour générer l'adresse pixel (o_pixel_address).
+
+![image](https://github.com/user-attachments/assets/31a36056-df3c-4102-9daf-5e1b694b9957)
+
 
 
 
