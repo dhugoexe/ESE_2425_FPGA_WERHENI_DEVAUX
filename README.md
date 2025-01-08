@@ -85,7 +85,7 @@ end architecture rtl;
 
 Nous allons réaliser dans cette partie un 'chenillard', qui permet d'allumer une LED à la fois, se déplaçant de gauche à droite, puis de droite à gauche de manière continue.
 
-````
+```
 library ieee;
 use ieee.std_logic_1164.all;
 
