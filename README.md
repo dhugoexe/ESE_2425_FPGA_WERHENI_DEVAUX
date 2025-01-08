@@ -324,6 +324,7 @@ end architecture rtl;
 
 ## 2.2 Bouncing ENSEA Logo
 
+Dans cette partie, on s'intéresse à l'affichage. Ainsi, on simule un écran avec VLC. Ci-dessous, l'affichage de la sortie HDMI avec le logo de l'école ainsi qu'un arriere plan "codé" sur les channels rouge et bleu.
 ![image](https://github.com/user-attachments/assets/6874a7a1-6dd7-41aa-a8d5-f7f9c5825162)
 
 
