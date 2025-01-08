@@ -29,6 +29,8 @@ Nous allons présente une table de configuration des broches (pins) pour un circ
 
 ## schéma correspond au nouveau code 
 
+Ce schéma représente un circuit de contrôle LED avec compteur et logique de synchronisation.
+
 ![image](https://github.com/user-attachments/assets/6da09687-44ad-43d6-98c0-350fa83cf1b6)
 
 ### BLINKS
