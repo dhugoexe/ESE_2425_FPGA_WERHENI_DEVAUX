@@ -219,7 +219,7 @@ o_new_frame : Signal indiquant le début d'une nouvelle trame
 
 ![image](https://github.com/user-attachments/assets/2c9241a5-8d39-4920-8788-51a8ce3418ab)
 
-3-Nous allons Ajoutez un compteur vertical (v_count) qui s’incrémente à chaque cycle du compteur horizontal, et boucle de 0 à v_total. Le compteur vertical doit également générer le signal de synchronisation vertical (o_hdmi_vs).
+3-Nous implémentons un compteur vertical (v_count) qui s'incrémente chaque fois que le compteur horizontal (h_count) complète un cycle complet (atteint h_total - 1). Le compteur vertical compte de 0 jusqu'à v_total - 1, où v_total représente la somme de la résolution verticale (v_res), du front porch vertical (v_fp), de la synchronisation verticale (v_sync) et du back porch vertical (v_bp). Ce compteur génère le signal de synchronisation vertical (o_hdmi_vs) qui passe à '0' pendant la période de synchronisation verticale, c'est-à-dire lorsque v_count se trouve dans l'intervalle [v_res + v_fp, v_res + v_fp + v_sync - 1], et reste à '1' le reste du temps.
 
 ```
 architecture rtl of hdmi_generator is
