@@ -263,7 +263,7 @@ end architecture rtl;
 
 ![image](https://github.com/user-attachments/assets/d5f4f7dd-a768-4cb0-8d5b-5a556dd77f33)
 
-5-Nous allons maintenant implémenter les signaux h_act et v_act pour détecter les zones actives horizontales et verticales.
+5-Nous ajoutons deux signaux de type std_logic, h_act et v_act, pour identifier les zones actives de l'image. Le signal h_act est actif ('1') uniquement lorsque h_count est inférieur à h_res, indiquant les pixels horizontaux visibles de l'image. De même, v_act est actif ('1') lorsque v_count est inférieur à v_res, représentant les lignes verticales visibles. La combinaison de ces deux signaux via une opération AND génère le signal o_hdmi_de (Data Enable) qui n'est actif que lorsque nous nous trouvons dans la zone d'affichage active de l'image, c'est-à-dire la zone où les pixels sont visibles à l'écran.
 
 ````
 architecture rtl of hdmi_generator is
