@@ -324,7 +324,13 @@ end architecture rtl;
 
 ## 2.2 Bouncing ENSEA Logo
 
-Dans cette partie, on s'intéresse à l'affichage. Ainsi, on simule un écran avec VLC. Ci-dessous, l'affichage de la sortie HDMI avec le logo de l'école ainsi qu'un arriere plan "codé" sur les channels rouge et bleu.
+Cette section du code gère l'affichage HDMI en implémentant deux éléments visuels distincts. Le premier élément est un logo de 95x95 pixels stocké dans une mémoire RAM double port (dpram), qui est affiché dans le coin supérieur gauche de l'écran. Le second élément est un arrière-plan dynamique qui utilise les coordonnées x et y pour créer un dégradé : la composante rouge est déterminée par la position verticale (y_counter) tandis que la composante bleue est basée sur la position horizontale (x_counter). La sortie HDMI est configurée en résolution 720x480 pixels.
+Le mécanisme d'affichage fonctionne ainsi :
+
+*Lorsque les coordonnées actuelles (x_counter, y_counter) sont dans la zone du logo (95x95 pixels), le système lit la valeur correspondante dans la RAM et l'applique uniformément sur les trois canaux RGB, créant ainsi une image en niveaux de gris.
+
+*Pour le reste de l'écran, l'affichage est généré dynamiquement en utilisant la position y pour le canal rouge et la position x pour le canal bleu, tandis que le canal vert reste à zéro, créant ainsi un dégradé bicolore unique.
+
 ![image](https://github.com/user-attachments/assets/6874a7a1-6dd7-41aa-a8d5-f7f9c5825162)
 
 
