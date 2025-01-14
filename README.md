@@ -331,6 +331,20 @@ Le mécanisme d'affichage fonctionne ainsi :
 
 *Pour le reste de l'écran, l'affichage est généré dynamiquement en utilisant la position y pour le canal rouge et la position x pour le canal bleu, tandis que le canal vert reste à zéro, créant ainsi un dégradé bicolore unique.
 
+Par souci d'optimisation et de simplicité, au lieu d'afficher l'arrière-plan en un seul bloc, on l'affiche sous forme d'un mosaïque de plus petit bloc: 
+```
+process(vpg_pclk)
+    begin
+        if rising_edge(vpg_pclk) then
+            if in_logo_area then
+                HDMI_TX_D <= ram_data & ram_data & ram_data;
+            else
+                HDMI_TX_D <= std_logic_vector(to_unsigned(y_counter, 8)) & x"00" & std_logic_vector(to_unsigned(x_counter, 8));
+            end if;
+        end if;
+    end process;
+```
+
 ![image](https://github.com/user-attachments/assets/6874a7a1-6dd7-41aa-a8d5-f7f9c5825162)
 
 
